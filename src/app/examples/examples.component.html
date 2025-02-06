@@ -1,0 +1,11 @@
+<div>
+    <h2>Cookie recipe</h2>
+    <label>
+      # of cookies:
+        <input type="range" min="10" max="100" step="10"
+          [value]="count()"/>
+      {{ count() }}
+    </label>
+    <app-examples-child [count]="count()"
+    (childEmitter)="emitterData($event)"></app-examples-child>
+</div>
